@@ -11,9 +11,9 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-stazioni = pd.read_csv('/workspace/flask/coordfix_ripetitori_radiofonici_milano_160120_loc_final.csv', sep=';')
-stazionigeo = gpd.read_file('/workspace/flask/ds710_coordfix_ripetitori_radiofonici_milano_160120_loc_final.geojson')
-quartieri = gpd.read_file('/workspace/flask/ds964_nil_wm.zip')
+stazioni = pd.read_csv('/workspace/flask/Verifica1A/coordfix_ripetitori_radiofonici_milano_160120_loc_final.csv', sep=';')
+stazionigeo = gpd.read_file('/workspace/flask/Verifica1A/ds710_coordfix_ripetitori_radiofonici_milano_160120_loc_final.geojson')
+quartieri = gpd.read_file('/workspace/flask/Verifica1A/ds964_nil_wm.zip')
 
 @app.route('/', methods=['GET'])
 def home():
