@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-quartieri = gpd.read_file("/workspace/Flask/appEs6/static/files/ds964_nil_wm.zip")
+quartieri = gpd.read_file("/workspace/flask/Verifica1C/ds964_nil_wm.zip")
 linee = gpd.read_file("https://dati.comune.milano.it/dataset/8bfe2015-2669-4796-9940-36b3c155b258/resource/b5acc06f-65fb-4481-9428-347fd1c18096/download/tpl_percorsi.geojson")
  
 linee["lung_km"] = linee["lung_km"].astype(float)
@@ -68,7 +68,7 @@ def linea():
 def mappapng():
     fig, ax = plt.subplots(figsize = (12,8))
 
-    lineeUtente.to_crs(epsg=3857).plot(ax=ax, edgecolor="k")
+    lineeUtente.to_crs(epsg=3857).plot(ax=ax, edgecolor="red")
     quartieri.to_crs(epsg=3857).plot(ax=ax, alpha=0.5, edgecolor="k")
     contextily.add_basemap(ax=ax)   
 
