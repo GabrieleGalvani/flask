@@ -1,0 +1,8 @@
+<form action="/elenco2" method = "GET">
+    <select name="comune">
+        {% for i in comuni_p%}
+        <option value="{{i}}" > {{i}}</option>
+        {%endfor%}
+    </select>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>

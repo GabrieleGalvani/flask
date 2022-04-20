@@ -1,0 +1,8 @@
+<form action="/scelta_comune" method = "GET">
+    <select name="Provincia">
+        {% for i in province%}
+        <option value="{{i}}" > {{i}}</option>
+        {%endfor%}
+    </select>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>

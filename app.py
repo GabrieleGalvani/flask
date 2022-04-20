@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+#pip install flask pandas contextily geopandas matplotlib
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])

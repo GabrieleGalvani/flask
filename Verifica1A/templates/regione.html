@@ -1,0 +1,8 @@
+<form action="/regione_utente" method = "GET">
+    <select name="Regione">
+        {% for i in regioni%}
+        <option value="{{i}}" > {{i}}</option>
+        {%endfor%}
+    </select>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>
